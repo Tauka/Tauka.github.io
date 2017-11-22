@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto-Thin-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+.progress {
+  flex-direction: column;
+  display: flex;
+  height: calc(100% - 60px);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .progress__title {
+    flex-basis: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Roboto';
+    font-weight: 300; }
+  .progress__loader {
+    flex-basis: 40%; }
+  .progress__control-panel {
+    flex-basis: 50%; }
+  @media (orientation: landscape) {
+    .progress {
+      flex-direction: row; } }
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .control-panel__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    height: 40%; }
+
+.control-item {
+  display: flex;
+  width: 120px; }
+  .control-item__input-wrapper {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center; }
+  .control-item__input {
+    border: 1px solid #8c8c8c;
+    border-radius: 15px;
+    width: 37px;
+    height: 23px;
+    line-height: 23px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    text-align: center; }
+  .control-item__checkbox {
+    position: relative;
+    border-radius: 15px;
+    width: 39px;
+    height: 25px;
+    background-color: #4a4a4a; }
+  .control-item__checkbox-input {
+    visibility: hidden;
+    position: absolute; }
+  .control-item__checkbox-label {
+    left: 0px;
+    position: absolute;
+    background-color: #d6d6d6;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    transition: all 0.5s ease; }
+  .control-item__label {
+    font-family: 'Roboto';
+    font-weight: 300;
+    flex-basis: 70%;
+    padding-left: 15px;
+    line-height: 27px; }
+  .control-item__checkbox-input:checked + .control-item__checkbox-label {
+    left: 13px;
+    background-color: white; }
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .loader__bar_animate {
+    animation: spin 4s linear infinite; }
+  .loader__bar_hide {
+    visibility: hidden; }
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); } }
+html, body {
+  height: 100%; }
+
+/*# sourceMappingURL=app.css.map */
