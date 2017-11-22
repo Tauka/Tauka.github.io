@@ -3,4 +3,6 @@ package-lock.json
 package.json
 node_modules/
 bundler.js
-.sass-cache
+.sass-cache/
+**/*/.DS_Store
+.DS_Store
