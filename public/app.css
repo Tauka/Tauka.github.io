@@ -61,7 +61,7 @@
   .control-item__input {
     border: 1px solid #8c8c8c;
     border-radius: 15px;
-    width: 37px;
+    width: 40px;
     height: 23px;
     line-height: 23px;
     font-family: 'Roboto';
@@ -70,7 +70,7 @@
   .control-item__checkbox {
     position: relative;
     border-radius: 15px;
-    width: 39px;
+    width: 42px;
     height: 25px;
     background-color: #4a4a4a; }
   .control-item__checkbox-input {
