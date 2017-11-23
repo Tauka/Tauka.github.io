@@ -17,12 +17,12 @@
     margin-bottom: 0;
     font-family: 'Roboto';
     font-weight: 300; }
-    @media (min-width: 321px) and (orientation: portrait) {
+    @media (min-width: 321px) and (orientation: portrait), (min-height: 321px) and (orientation: landscape) {
       .progress__title {
         flex-basis: 10%; } }
   .progress__loader {
     flex-basis: 50%; }
-    @media (min-width: 321px) and (orientation: portrait) {
+    @media (min-width: 321px) and (orientation: portrait), (min-height: 321px) and (orientation: landscape) {
       .progress__loader {
         flex-basis: 40%; } }
   .progress__control-panel {
