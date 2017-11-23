@@ -12,13 +12,19 @@
   padding-top: 30px;
   padding-bottom: 30px; }
   .progress__title {
-    flex-basis: 10%;
+    flex-basis: 5%;
     margin-top: 0;
     margin-bottom: 0;
     font-family: 'Roboto';
     font-weight: 300; }
+    @media (min-width: 321px) and (orientation: portrait) {
+      .progress__title {
+        flex-basis: 10%; } }
   .progress__loader {
-    flex-basis: 40%; }
+    flex-basis: 50%; }
+    @media (min-width: 321px) and (orientation: portrait) {
+      .progress__loader {
+        flex-basis: 40%; } }
   .progress__control-panel {
     flex-basis: 50%; }
   @media (orientation: landscape) {
@@ -36,7 +42,8 @@
     justify-content: space-around;
     align-items: center;
     width: 40%;
-    height: 40%; }
+    height: 40%;
+    min-height: 100px; }
 
 .control-item {
   display: flex;
@@ -86,10 +93,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .loader__bar_animate {
-    animation: spin 4s linear infinite; }
-  .loader__bar_hide {
-    visibility: hidden; }
+  .loader__bar {
+    transform: scale(0.9); }
+    .loader__bar_animate {
+      animation: spin 4s linear infinite; }
+    .loader__bar_hide {
+      visibility: hidden; }
+    @media (min-width: 321px) and (orientation: portrait), (min-height: 321px) and (orientation: landscape) {
+      .loader__bar {
+        transform: scale(1); } }
+    @media (min-width: 375px) and (orientation: portrait), (min-height: 375px) and (orientation: landscape) {
+      .loader__bar {
+        transform: scale(1.2); } }
 
 @keyframes spin {
   100% {
