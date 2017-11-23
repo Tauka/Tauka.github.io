@@ -17,17 +17,17 @@
     margin-bottom: 0;
     font-family: 'Roboto';
     font-weight: 300; }
-    @media (min-width: 321px) and (orientation: portrait) and (max-device-aspect-ratio: 1 / 1), (min-height: 321px) and (orientation: landscape) and (max-device-aspect-ratio: 1 / 1) {
+    @media (min-width: 321px), (min-height: 321px) {
       .progress__title {
         flex-basis: 10%; } }
   .progress__loader {
     flex-basis: 50%; }
-    @media (min-width: 321px) and (orientation: portrait) and (max-device-aspect-ratio: 1 / 1), (min-height: 321px) and (orientation: landscape) and (max-device-aspect-ratio: 1 / 1) {
+    @media (min-width: 321px), (min-height: 321px) {
       .progress__loader {
         flex-basis: 40%; } }
   .progress__control-panel {
     flex-basis: 50%; }
-  @media (orientation: landscape) and (max-device-aspect-ratio: 1 / 1) {
+  @media (min-width: 450px) {
     .progress {
       flex-direction: row; } }
 
