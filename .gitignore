@@ -6,3 +6,4 @@ bundler.js
 .sass-cache/
 **/*/.DS_Store
 .DS_Store
+public/app.css.map
