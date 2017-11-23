@@ -17,14 +17,20 @@
     margin-bottom: 0;
     font-family: 'Roboto';
     font-weight: 300; }
-    @media (min-width: 321px), (min-height: 321px) {
+    @media (min-width: 321px) {
       .progress__title {
         flex-basis: 10%; } }
+    @media (min-width: 450px) {
+      .progress__title {
+        flex-basis: 5%; } }
   .progress__loader {
     flex-basis: 50%; }
-    @media (min-width: 321px), (min-height: 321px) {
+    @media (min-width: 321px) {
       .progress__loader {
         flex-basis: 40%; } }
+    @media (min-width: 450px) {
+      .progress__loader {
+        flex-basis: 50%; } }
   .progress__control-panel {
     flex-basis: 50%; }
   @media (min-width: 450px) {
@@ -93,14 +99,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .loader__bar_animate {
-    animation: spin 4s linear infinite; }
-  .loader__bar_hide {
-    visibility: hidden; }
+  .loader__bar {
+    transform: rotate(0deg) scale(0.8); }
+    .loader__bar_animate {
+      animation: spin 4s linear infinite; }
+    .loader__bar_hide {
+      visibility: hidden; }
+    @media (min-width: 450px) and (orientation: portrait), (min-height: 450px) and (orientation: landscape) {
+      .loader__bar {
+        transform: scale(0.8); } }
+    @media (min-width: 321px) and (orientation: portrait), (min-height: 321px) and (orientation: landscape) {
+      .loader__bar {
+        transform: scale(1); } }
+    @media (min-width: 375px) and (orientation: portrait), (min-height: 375px) and (orientation: landscape) {
+      .loader__bar {
+        transform: scale(1.2); } }
 
 @keyframes spin {
   100% {
-    transform: rotate(360deg); } }
+    transform: rotate(360deg) scale(0.8); } }
 html, body {
   height: 100%; }
 
