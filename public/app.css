@@ -93,18 +93,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .loader__bar {
-    transform: scale(0.9); }
-    .loader__bar_animate {
-      animation: spin 4s linear infinite; }
-    .loader__bar_hide {
-      visibility: hidden; }
-    @media (min-width: 321px) and (orientation: portrait), (min-height: 321px) and (orientation: landscape) {
-      .loader__bar {
-        transform: scale(1); } }
-    @media (min-width: 375px) and (orientation: portrait), (min-height: 375px) and (orientation: landscape) {
-      .loader__bar {
-        transform: scale(1.2); } }
+  .loader__bar_animate {
+    animation: spin 4s linear infinite; }
+  .loader__bar_hide {
+    visibility: hidden; }
 
 @keyframes spin {
   100% {
