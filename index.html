@@ -3,65 +3,54 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Yandex Progress</title>
-	<link rel="stylesheet" type="text/css" href="public/normalize.css">
+	<title>Tauka Kunzhol - Javascript Engineer</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="public/app.css">
 </head>
 <body>
-	<div class="progress">
-		<h2 class="progress__title">
-			Progress
-		</h2>
-		<div class="loader progress__loader">
-			<svg width="200" height="200" class="loader__bar" id="loader-bar">
-				<circle cx="100" cy="100" r="80" stroke="#ededea" stroke-width="9" fill="none"/>
-			  	<path 
-			  		id="loader-arc1"
-			        d="M 100,100 m 0, -80 a 80,80 0 0,1 0,0"
-			        stroke="#ffcc00"
-			        stroke-width="9"
-			        fill="none"
-			  	/>
-		  		<path 
-			  		id="loader-arc2"
-			        d="M 100, 100 m 0, 80 a 80,80 0 0,1 0,0"
-			        stroke="#ffcc00"
-			        stroke-width="9"
-			        fill="none"
-			  	/>
-			</svg>
-		</div>
 
-		<div class="control-panel progress__control-panel">
-			<div class="control-panel__inner">
-				<div class="control-item">
-					<div class="control-item__input-wrapper">
-						<input type="number" min="0" max="100" class="control-item__input" id="js-control-item_value"/>
-					</div>
-					<span class="control-item__label">Value</span>
-				</div>
-				<div class="control-item">
-					<div class="control-item__input-wrapper">
-						<div class="control-item__checkbox">
-							<input type="checkbox" class="control-item__checkbox-input" id="js-control-item_animate"/>
-							<label for="js-control-item_animate" class="control-item__checkbox-label"></label>
-						</div>
-					</div>
-					<span class="control-item__label">Animate</span>
-				</div>
-				<div class="control-item">
-					<div class="control-item__input-wrapper">
-						<div class="control-item__checkbox">
-							<input type="checkbox" class="control-item__checkbox-input" id="js-control-item_hide"/>
-							<label for="js-control-item_hide" class="control-item__checkbox-label"></label>
-						</div>
-					</div>
-					<span class="control-item__label">Hide</span>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="public/app.js"></script>
+  <h1> Hello, I'm Tauka Kunzhol </h1>
+  <main>
+    <p class="bio"> I’m a javascript engineer with <span id="elapsed-years">5.482192</span> years experience. <br/> I like building great UIs, and up to challenges. </p>
+    <p> Current favorite stack: <a href="https://aws.amazon.com/">AWS</a>, <a href="https://reactjs.org/">React</a>, <a href="https://www.typescriptlang.org/">Typescript</a>, <a href="https://effector.dev/">Effector</a>, <a href="https://jestjs.io/">Jest</a> </p>
+    <p> Current company that I work for: <a href="https://dynamik.fi/">Dynamik</a> </p>
+    <div class="social-media">
+      <a class="social-media-item" href="https://t.me/mega_tauka">
+        <img class="social-media-icon" src="./public/telegram 1.svg"/>
+        Telegram
+      </a>
+      <a class="social-media-item" href="mailto:k.tauka@gmail.com">
+        <img class="social-media-icon" srcset="./public/mail-2x.png 2x"src="./public/mail.png"/>
+        Email
 
+      </a>
+      <a class="social-media-item" href="https://www.linkedin.com/in/tauyekel-kunzhol-898437150/">
+      <img class="social-media-icon" srcset="./public/linkedin-2x.png 2x" src="./public/linkedin.png"/>
+      Linkedin
+      </a>
+    </div>
+  </main>
+  <script>
+    function calculateElapsedYears() {
+      const elapsed = Date.now() - Date.UTC(2016, 09, 1);
+      return (elapsed / 31556952000).toFixed(8);
+    }
+
+    const span = document.getElementById("elapsed-years");
+    span.textContent = calculateElapsedYears();
+
+    function animate(timestamp) {
+      requestAnimationFrame(animate)
+      span.textContent = calculateElapsedYears();
+    }
+
+    animate();
+  </script>
 </body>
 </html>
